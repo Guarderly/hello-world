@@ -15,10 +15,9 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
 </head>
 
-<body>
+<body  >
 
 <div id="mainDiv">
 	<div id="content">
@@ -37,9 +36,9 @@
 			我觉得我已经习惯了有她的生活;<br />
 			<span class="comments">// 我，偶尔，有空，可能会</span><br />
 			时不时想念（欺负）她;<br />
-			<span class="comments">// 虽然，我现在还是个穷孩子（刚还完贷款破产了T^T）</span><br />
-			<span class="comments">// 但是，</span><br />
-			<span class="keyword">2014年12月8日</span> 是 <span class="keyword"> 刘颖 </span>同学的23岁生日;<br />
+			<span class="comments">// 虽然，我们的爱情尚未开花结果</span><br />
+			<span class="comments">// 爱情长跑的路，且行且珍惜，相信我们不久的将来就会有自己幸福温暖的家</span><br />
+			  <span class="keyword"> 刘颖 </span>同学的<span id="year"></span>岁生日快到啦;<br />
 			作为她<span class="keyword"> 帅帅的 </span>男朋友，我花了几秒的时间来犹豫要给她一个怎么样的 <span class="keyword"> 惊喜 </span>;<br />
 			<br>
 			<br>
@@ -52,7 +51,7 @@
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					亲爱的，这是我们相爱在一起的时光。
+					这是我们相爱在一起的时光。
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
@@ -65,7 +64,15 @@
 	<div id="copyright">
 		<a href="#"></a><br />
 		<a href="#"></a><br />
+		<script type="text/javascript" >
+		var date=new Date();
+		var year=date.getFullYear();
+		var yearOld=year-1991;
+		var showYear=""+yearOld;
+		var yearOldSpan=document.getElementById("year");
 		
+		yearOldSpan.innerHTML=showYear;
+		</script>
 	</div>
 </div>
 
@@ -100,6 +107,7 @@ if (!document.createElement('canvas').getContext) {
 
 	adjustCodePosition();
 	$("#code").typewriter();
+
 }
 </script>
 
